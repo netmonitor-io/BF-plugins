@@ -18,21 +18,21 @@ r.close()
 # Check the value and print the result
 
 if working_state == "L":
-    if input_status == b"0":
+    if input_status == b"1":
         print("ON")
-        sys.exit(0)
-    elif input_status == b"1":
-        print("OFF")
         sys.exit(2)
+    elif input_status == b"0":
+        print("OFF")
+        sys.exit(0)
     else:
         print("Unknown input status")
         sys.exit(3)
 
 if working_state == "H":
-    if input_status == b"0":
+    if input_status == b"1":
         print("OFF")
         sys.exit(0)
-    elif input_status == b"1":
+    elif input_status == b"0":
         print("ON")
         sys.exit(2)
     else:
