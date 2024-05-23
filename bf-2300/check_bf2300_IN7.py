@@ -20,10 +20,10 @@ r.close()
 if working_state == "L":
     if input_status == b"1":
         print("ON")
-        sys.exit(0)
+        sys.exit(2)
     elif input_status == b"0":
         print("OFF")
-        sys.exit(2)
+        sys.exit(0)
     else:
         print("Unknown input status")
         sys.exit(3)
